@@ -19,10 +19,8 @@
         </div>
 
 
-
-
-
-        <nav>
+        <nav id="navigation">
+            <button id="menu">☰</button>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#">Chamber Project</a></li>
@@ -32,11 +30,52 @@
     </header>
 
     <main>
-        <h1>Welcome to WDD231</h1>
-    </main>
+    <h1>Home</h1>
 
+    <section class="home-grid">
+      <section class="card about">
+        <h2>About Me</h2>
+        <p>
+          Hello! My name is Xanen Gilbert. I am studying web development and
+          learning how to build responsive, professional websites using HTML,
+          CSS, and JavaScript.
+        </p>
+      </section>
 
-    <footer></footer>
+      <section class="card photo">
+        <h2>Student Photo</h2>
+        <div class="photo-box">Photo</div>
+      </section>
+    </section>
+
+    <section class="card courses">
+      <h2>Web Certificate Courses</h2>
+
+      <div class="course-buttons">
+        <button id="all">All</button>
+        <button id="cse">CSE</button>
+        <button id="wdd">WDD</button>
+      </div>
+
+      <div id="courseList" class="course-list"></div>
+
+      <p>
+        The total credits for courses listed above is
+        <span id="totalCredits"></span>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="socials">
+      <span>in</span>
+      <span>GitHub</span>
+      <span>X</span>
+    </div>
+
+    <p>&copy; <span id="currentyear"></span> • Xanen Gilbert • Arizona, USA</p>
+    <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
 
 
 
