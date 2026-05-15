@@ -8,6 +8,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <meta name="description" content="This is the index.html file for the WDD231 project. It contains the basic structure of the website, including the header, main content, and footer.">
     <link rel="stylesheet" href="styles/directory.css">
+    <meta name="author" content="Xane Gilbert">
+    <link rel="icon" href="images/favicon.ico">
+    <script src="scripts/weather.js"></script>
+    <script src="../scripts/base.js"></script>
     <title>Chamber Project Directory</title>
 </head>
 <body>
@@ -33,16 +37,35 @@
 
 
     <main>
-        <h1>Chamber Project</h1>
-        <p>This is the directory page for the Chamber Project.</p>
+        <h2>Home</h2>
+
+        <section class="home-info">
+            <div class="event-card">
+                <h3>Events</h3>
+                <p>Description of Events.</p>
+            </div>
+            <div class="weather-card">
+                <h3>Current Weather</h3>
+                <p>Description of Current Weather.</p>
+            </div>
+            <div class="forecast-card">
+                <h3>Forecast</h3>
+                <p>Description of Forecast.</p>
+            </div>
+        </section>
+
+
+
+
+
     </main>
 
 
     <footer>
         <div class="socials">
-            <span>in</span>
-            <span>GitHub</span>
-            <span>X</span>
+            <a href="https://github.com/xanengilbert">GitHub</a>
+            <a href="https://www.linkedin.com/in/xanen-gilbert/">LinkedIn</a>
+            <a href="https://www.instagram.com/xanengilbert/">Instagram</a>
         </div>
 
         <p>&copy; <span id="currentyear"></span> • Xanen Gilbert • Arizona, USA</p>
