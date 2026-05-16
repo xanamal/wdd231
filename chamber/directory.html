@@ -10,8 +10,14 @@
     <link rel="stylesheet" href="styles/directory.css">
     <meta name="author" content="Xane Gilbert">
     <link rel="icon" href="images/favicon.ico">
-    <script src="scripts/weather.js"></script>
-    <script src="../scripts/base.js"></script>
+    <script src="scripts/weather.js" defer></script>
+    <script src="../scripts/base.js" defer></script>
+    <script src="scripts/directory.js" defer></script>
+    <meta property="og:title" content="Chamber Project Directory for Local Businesses">
+    <meta property="og:description" content="Explore local businesses, events, weather updates, and community resources in this chamber directory project.">
+    <meta property="og:image" content="https://yourdomain.com/images/chamber-preview.jpg">
+    <meta property="og:url" content="https://yourdomain.com/chamber/directory.html">
+
     <title>Chamber Project Directory</title>
 </head>
 <body>
@@ -37,7 +43,7 @@
 
 
     <main>
-        <h2>Home</h2>
+        <h1>Home</h1>
 
         <section class="home-info">
             <div class="event-card">
@@ -54,7 +60,14 @@
             </div>
         </section>
 
-
+        <section>
+            <h2>Members</h2>
+            <div id="members" class="grid"></div>
+            <div class="view-buttons">
+                <button id="grid-view">Grid View</button>
+                <button id="list-view">List View</button>
+            </div>
+        </section>
 
 
 

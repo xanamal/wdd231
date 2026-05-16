@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Desert Tech Solutions",
+    "address": "123 Main Street, Phoenix, AZ 85001",
+    "phone": "(602) 555-0145",
+    "website": "https://example.com",
+    "image": "desert-tech.webp",
+    "membership": 3,
+    "description": "Local technology support and web services for small businesses."
+  },
+  {
+    "name": "Cactus Cafe",
+    "address": "45 Market Road, Mesa, AZ 85201",
+    "phone": "(480) 555-0198",
+    "website": "https://example.com",
+    "image": "cactus-cafe.webp",
+    "membership": 2,
+    "description": "A family-owned cafe serving breakfast, lunch, and fresh pastries."
+  },
+  {
+    "name": "Sun Valley Fitness",
+    "address": "778 Wellness Ave, Chandler, AZ 85224",
+    "phone": "(480) 555-0101",
+    "website": "https://example.com",
+    "image": "sun-valley-fitness.webp",
+    "membership": 1,
+    "description": "Fitness center offering personal training and group classes."
+  },
+  {
+    "name": "Gilbert Auto Care",
+    "address": "900 Garage Lane, Gilbert, AZ 85234",
+    "phone": "(480) 555-0122",
+    "website": "https://example.com",
+    "image": "gilbert-auto-care.webp",
+    "membership": 2,
+    "description": "Reliable auto repair and maintenance services."
+  },
+  {
+    "name": "Copper State Realty",
+    "address": "321 Home Street, Tempe, AZ 85281",
+    "phone": "(602) 555-0177",
+    "website": "https://example.com",
+    "image": "copper-state-realty.webp",
+    "membership": 3,
+    "description": "Real estate services for buyers, sellers, and investors."
+  },
+  {
+    "name": "Bright Path Learning",
+    "address": "88 Education Blvd, Scottsdale, AZ 85251",
+    "phone": "(480) 555-0164",
+    "website": "https://example.com",
+    "image": "bright-path-learning.webp",
+    "membership": 1,
+    "description": "Tutoring and academic support for students of all ages."
+  },
+  {
+    "name": "Mesa Outdoor Supply",
+    "address": "654 Adventure Drive, Mesa, AZ 85204",
+    "phone": "(480) 555-0133",
+    "website": "https://example.com",
+    "image": "mesa-outdoor-supply.webp",
+    "membership": 2,
+    "description": "Outdoor gear, camping equipment, and hiking supplies."
+  }
+]
