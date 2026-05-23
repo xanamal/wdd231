@@ -54,8 +54,9 @@ body {
 header,
 main,
 footer {
-    width: min(90%, var(--max-width));
+    width: 100%;
     margin: 0 auto;
+    padding-inline: 1rem;
 }
 
 /*=================

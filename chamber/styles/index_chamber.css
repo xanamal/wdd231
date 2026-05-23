@@ -49,6 +49,10 @@ body {
     color: var(--color-text);
     font-size: var(--font-medium);
     line-height: 1.5;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 header,
@@ -153,10 +157,14 @@ header {
     Main Styles
 =================*/
 
+
 main {
   background: var(--color-card);
   padding: var(--space-md);
   box-shadow: var(--shadow-soft);
+  margin-top: var(--space-md);
+
+  flex: 1;
 }
 
 h1 {
@@ -165,123 +173,204 @@ h1 {
   margin: 0 0 var(--space-md);
 }
 
-.home-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-md);
+h2 {
+  color: var(--color-dark);
 }
 
-/* =========================
-   Cards
-   ========================= */
+/* Hero Section */
 
-.card {
-  background: var(--color-light);
-  border: 1px solid var(--color-accent);
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  box-shadow: var(--shadow-soft);
+.hero {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-lg);
 }
 
-.card h2 {
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.cta-button {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
   background: var(--color-dark);
   color: var(--color-text-light);
-  text-align: center;
-  font-size: var(--font-base);
-  padding: var(--space-xs);
-  margin: 0;
-}
-
-.card p {
-  padding: var(--space-md);
-  margin: 0;
-}
-
-/* =========================
-   Photo Section
-   ========================= */
-
-.photo {
-  text-align: center;
-}
-
-.photo-box {
-  width: clamp(160px, 16vw, 240px);
-  height: clamp(180px, 22vw, 300px);
-  background: var(--color-soft);
-  border: 2px dashed var(--color-border);
-  border-radius: var(--radius-md);
-  margin: var(--space-md) auto;
-}
-
-.photo-box img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: var(--radius-md);
-}
-
-/* =========================
-   Courses Section
-   ========================= */
-
-.courses {
-  margin-top: var(--space-md);
-  text-align: center;
-}
-
-.course-buttons {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-sm);
-  padding: var(--space-md);
-}
-
-.course-buttons button {
-  padding: var(--space-sm);
-  border: 1px solid var(--color-border);
-  background: var(--color-soft);
-  color: var(--color-dark);
+  padding: 0.75rem 1rem;
   border-radius: var(--radius-sm);
-  cursor: pointer;
+  text-decoration: none;
   font-weight: 700;
 }
 
-.course-buttons button:hover {
-  background: var(--color-secondary);
-}
-
-.course-list {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-sm);
-  padding: var(--space-md);
-}
-
-.course-card {
-  background: var(--color-soft);
+.cta-button:hover {
+  background: var(--color-primary);
   color: var(--color-dark);
-  border: 1px solid var(--color-border);
-  padding: var(--space-sm);
+}
+
+.hero {
+  position: relative;
+  max-width: 750px;
+  margin: 0 auto var(--space-lg);
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-md);
+}
+
+/* Top 3 cards */
+
+.home-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+}
+
+.info-card {
+  background: var(--color-light);
+  border: 1px solid var(--color-dark);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  box-shadow: var(--shadow-soft);
+  min-height: 130px;
+}
+
+.info-card h2 {
+  font-size: 1.1rem;
+  margin: 0 0 0.5rem;
+  background: var(--color-dark);
+  color: var(--color-text-light);
+  padding: 0.5rem;
   border-radius: var(--radius-sm);
+  text-align: center;
+}
+
+.info-card p {
+  font-size: 0.95rem;
+  margin: 0.5rem 0 0;
+  text-align: center;
+}
+
+/* Members Section */
+
+.members-section {
+  margin-top: var(--space-md);
+}
+
+.members-section h2 {
+  text-align: center;
+  margin-bottom: var(--space-sm);
+}
+
+.view-buttons {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.view-buttons button {
+  padding: 0.6rem 1rem;
+  margin: 0.25rem;
+  cursor: pointer;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: var(--color-dark);
+  color: var(--color-text-light);
+  font-weight: 700;
+}
+
+.view-buttons button:hover {
+  background: var(--color-primary);
+  color: var(--color-dark);
+}
+
+/* Grid View */
+
+#members.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.member-card {
+  background: #ffffff;
+  padding: 0.9rem;
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius-md);
+  text-align: center;
+  box-shadow: var(--shadow-soft);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.course-card:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-soft);
+.member-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(63, 43, 29, 0.2);
 }
 
-.course-card h3,
-.course-card p {
-  margin: 0.25rem;
+.member-card img {
+  width: 95px;
+  height: 95px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
 }
 
-.course-card.completed {
+.member-card h3 {
+  font-size: 1.05rem;
+  color: var(--color-dark);
+  margin: 0.4rem 0;
+}
+
+.member-card p {
+  font-size: 0.85rem;
+  margin: 0.25rem 0;
+}
+
+.member-card a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.45rem 0.75rem;
   background: var(--color-dark);
-  color: var(--color-text-light);
-  border-color: var(--color-dark);
+  color: white;
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 700;
 }
+
+.member-card a:hover {
+  background: var(--color-primary);
+  color: var(--color-dark);
+}
+
+/* List View */
+
+#members.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+#members.list .member-card {
+  text-align: left;
+  padding: 0.75rem 1rem;
+}
+
+#members.list .member-card img {
+  display: none;
+}
+
+#members.list .member-card h3 {
+  margin-top: 0;
+}
+
+
+
 
 /* =========================
    Footer
@@ -315,31 +404,4 @@ footer {
 footer p {
   margin: 0.25rem;
   font-size: var(--font-small);
-}
-
-/* =========================
-   Larger Screens
-   ========================= */
-
-@media (min-width: 1000px) {
-  #menu {
-    display: none;
-  }
-
-  #navigation {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .home-grid {
-    grid-template-columns: 2fr 1fr;
-  }
-
-  .course-buttons {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .course-list {
-    grid-template-columns: repeat(3, 1fr);
-  }
 }
