@@ -114,12 +114,24 @@ header {
 
 }
 
-#menu::before {
-    content: "☰";
+#menu {
+  display: none;
 }
 
-#menu.open::before {
-    content: "✕";
+#navigation {
+  display: flex;
+  justify-content: center;
+}
+
+#navigation ul {
+  display: flex;
+  flex-direction: row;
+}
+
+#navigation a.active,
+#navigation a[aria-current="page"] {
+  background: var(--color-primary);
+  color: var(--color-dark);
 }
 
 #navigation {
@@ -200,13 +212,14 @@ h2 {
 
 .hero {
   position: relative;
-  max-width: 750px;
+  width: min(100%, 1100px);
   margin: 0 auto var(--space-lg);
 }
 
 .hero img {
   width: 100%;
-  height: auto;
+  height: clamp(200px, 40vw, 400px);
+  object-fit: cover;
   display: block;
   border-radius: var(--radius-md);
 }
@@ -273,6 +286,48 @@ h2 {
 }
 
 .view-buttons button:hover {
+  background: var(--color-primary);
+  color: var(--color-dark);
+}
+
+/*spotlight section*/
+
+#spotlights {
+  display: grid;
+  gap: 1rem;
+}
+
+.spotlight-card {
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  text-align: center;
+  box-shadow: var(--shadow-soft);
+}
+
+.spotlight-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+.spotlight-card h3 {
+  margin: 0.5rem 0;
+}
+
+.spotlight-card a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background: var(--color-dark);
+  color: white;
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+}
+
+.spotlight-card a:hover {
   background: var(--color-primary);
   color: var(--color-dark);
 }
