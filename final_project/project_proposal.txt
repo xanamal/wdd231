@@ -1,0 +1,13 @@
+# Final Project Proposal
+
+For my final project, I want to create a website focused on *Rainbow Six Siege* ranked maps. 
+The purpose of this website will be to help players study map layouts, 
+learn important callouts, and better understand how each ranked map is structured.
+The website will include several ranked maps from the game, along with blueprint-style layouts for each one. 
+Each map page will show key areas, room names, bomb sites, and common callouts that teams use during matches. 
+This will help players communicate more clearly and improve their teamwork.
+The target audience for this website is *Rainbow Six Siege* players who want to get better at ranked play. 
+It could be useful for new players learning the maps, as well as teams who want to review strategies and improve their coordination.
+The website will include a home page explaining the purpose of the project, a map selection page, and individual pages or sections for each map.
+ I also want the design to be clean, organized, and easy to use so users can quickly find the map information they need.
+Overall, this project will combine my interest in gaming with web design by creating a helpful study tool for competitive *Rainbow Six Siege* players.
