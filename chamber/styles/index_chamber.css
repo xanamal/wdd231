@@ -114,20 +114,6 @@ header {
 
 }
 
-#menu {
-  display: none;
-}
-
-#navigation {
-  display: flex;
-  justify-content: center;
-}
-
-#navigation ul {
-  display: flex;
-  flex-direction: row;
-}
-
 #navigation a.active,
 #navigation a[aria-current="page"] {
   background: var(--color-primary);
