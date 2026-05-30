@@ -15,6 +15,7 @@
     <script src="../scripts/base.js" defer></script>
     <script src="scripts/directory.js" defer></script>
     <script src="scripts/spotlight.js" defer></script>
+    <script src="scripts/join.js" defer></script>
     <meta property="og:title" content="Chamber Project Directory for Local Businesses">
     <meta property="og:description" content="Explore local businesses, events, weather updates, and community resources in this chamber directory project.">
     <meta property="og:url" content="https://xanamal/chamber/directory.html">
@@ -46,8 +47,77 @@
 
 
     <main>
+        <h1>Join the Chamber</h1>
 
-        
+        <form method="get" action="thankyou.html">
+
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="fname" required>
+
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lname" required>
+
+        <label for="orgtitle">Organization Title</label>
+        <input
+            type="text"
+            id="orgtitle"
+            name="orgtitle"
+            title="Only letters, spaces, and hyphens, minimum 7 characters"
+            pattern="[A-Za-z\s\-]{7,}"
+        >
+
+        <label for="email">Email Address</label>
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="example@email.com"
+            required
+        >
+
+        <label for="phone">Mobile Phone</label>
+        <input
+            type="tel"
+            id="phone"
+            name="phone"
+            required
+        >
+
+        <label for="orgname">Organization Name</label>
+        <input
+            type="text"
+            id="orgname"
+            name="orgname"
+            required
+        >
+
+        <label for="membership">Membership Level</label>
+        <select id="membership" name="membership" required>
+            <option value="">Select a Membership Level</option>
+            <option value="np">NP Membership (Non-Profit)</option>
+            <option value="bronze">Bronze Membership</option>
+            <option value="silver">Silver Membership</option>
+            <option value="gold">Gold Membership</option>
+        </select>
+
+        <label for="description">Organization Description</label>
+        <textarea
+            id="description"
+            name="description"
+            rows="5"
+        ></textarea>
+
+        <!-- Hidden timestamp field -->
+        <input
+            type="hidden"
+            id="timestamp"
+            name="timestamp"
+            value=""
+        >
+
+        <button type="submit">Submit Application</button>
+
+    </form>
 
     </main>
 
