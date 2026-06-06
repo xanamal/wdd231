@@ -215,6 +215,14 @@ h2 {
   margin: 0;
 }
 
+.place-card button {
+  grid-area: button;
+  padding: 0.7rem 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
 /* Small: 320px to 640px */
 @media screen and (max-width: 640px) {
   .place-card {
@@ -222,30 +230,8 @@ h2 {
       "title"
       "image"
       "desc"
-      "address";
-  }
-}
-
-/* Medium: 641px to 1024px */
-@media screen and (min-width: 641px) and (max-width: 1024px) {
-  .place-card {
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-      "image title"
-      "image address"
-      "image desc"
-      "image button";
-  }
-}
-
-/* Large: 1025px and above */
-@media screen and (min-width: 1025px) {
-  .place-card {
-    grid-template-columns: 1fr 1fr 150px;
-    grid-template-areas:
-      "image title title"
-      "image desc desc"
-      "image address address";
+      "address"
+      "button";
   }
 }
 

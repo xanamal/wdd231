@@ -1,0 +1,11 @@
+/* Large: 1025px and above */
+@media only screen and (min-width: 64rem) {
+  .place-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-areas:
+      "image title title"
+      "image desc desc"
+      "image address button";
+  }
+}
