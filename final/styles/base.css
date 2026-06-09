@@ -18,6 +18,10 @@ body {
   background: var(--primary-bg);
   color: var(--text-light);
   line-height: 1.6;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
@@ -26,10 +30,16 @@ header {
   padding: 1rem;
 }
 
+.header-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
 .site-branding {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
@@ -41,10 +51,14 @@ header {
 nav ul {
   list-style: none;
   padding: 0;
-  margin: 1rem 0 0;
+  margin: 0;
+
   display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
+  flex-direction: row;
+
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
 }
 
 nav a {
@@ -60,6 +74,8 @@ nav a:hover {
 }
 
 main {
+  flex: 1;
+
   max-width: 1100px;
   margin: 0 auto;
   padding: 1rem;
@@ -147,50 +163,38 @@ h3 {
   gap: 1rem;
 }
 
+
+
+/* =========================
+   Footer
+   ========================= */
+
 footer {
-  background: var(--secondary-bg);
-  border-top: 2px solid var(--accent);
+  background: var(--color-dark);
+  color: var(--color-text-light);
   text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
+  padding: var(--space-md);
+  margin-bottom: var(--space-lg);
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+  box-shadow: var(--shadow-soft);
 }
 
-footer a {
-  color: var(--highlight);
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-lg);
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  margin-bottom: var(--space-sm);
 }
 
-/* Medium screens */
-@media screen and (min-width: 641px) {
-  .site-branding {
-    justify-content: flex-start;
-    gap: 2rem;
-  }
-
-  nav ul {
-    flex-direction: row;
-    margin: 0;
-  }
-
-  .hero {
-    padding: 3rem 2rem;
-  }
-
-  .featured-maps {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .info-grid {
-    grid-template-columns: 1fr 1fr;
-  }
+.socials a img {
+  width: 30px;
+  height: 30px;
+  filter: invert(100%) sepia(100%) grayscale(100%) brightness(150%);
+  transition: filter 0.3s ease;
 }
 
-/* Large screens */
-@media screen and (min-width: 1025px) {
-  .featured-maps {
-    grid-template-columns: repeat(5, 1fr);
-  }
-
-  .map-card img {
-    height: 140px;
-  }
+footer p {
+  margin: 0.25rem;
+  font-size: var(--font-small);
 }
