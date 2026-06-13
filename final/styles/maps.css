@@ -152,132 +152,154 @@ h3 {
   gap: 1rem;
 }
 
-.map-card {
-  background: var(--card-bg);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  overflow: hidden;
-}
 
-.map-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  display: block;
-}
 
-.map-card h2 {
-  padding: 0 1rem;
-}
 
-.map-card p {
-  padding: 0 1rem 1rem;
-}
 
-.info-grid {
+.maps-container {
   display: grid;
-  gap: 1rem;
-}
-
-/* about page info */
-.about-main {
+  grid-template-columns: 1fr;
+  gap: 2rem;
   max-width: 1100px;
   margin: 0 auto;
   padding: 2rem 1rem;
 }
 
-.about-hero {
-  background: linear-gradient(
-      rgba(15, 23, 42, 0.9),
-      rgba(15, 23, 42, 0.85)
-    ),
-    url("../images/about-hero.webp");
-  background-size: cover;
-  background-position: center;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 3rem 2rem;
-  margin-bottom: 2rem;
-}
-
-.about-text {
-  max-width: 650px;
-}
-
-.about-text h1 {
-  color: var(--text-light);
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.about-text p {
-  color: var(--text-light);
-  font-size: 1.1rem;
-}
-
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-}
-
-.about-card {
-  background: var(--secondary-bg);
-  border: 1px solid var(--border);
-  border-radius: 12px;
+.map-card {
+  background: var(--card-bg);
+  border: 2px solid var(--border);
+  border-radius: 16px;
   padding: 1.5rem;
-  box-shadow: 0 0 15px rgba(20, 184, 166, 0.08);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
 }
 
-.about-card h2 {
-  color: var(--accent);
-  margin-bottom: 0.75rem;
-}
-
-.about-card p {
-  color: var(--text-light);
-  margin-bottom: 1rem;
-}
-
-.updates-card ul {
-  padding-left: 1.25rem;
-}
-
-.updates-card li {
-  margin-bottom: 0.6rem;
-  color: var(--text-light);
-}
-
-#random-map img {
+.map-main-img {
   width: 100%;
-  height: 180px;
+  max-height: 280px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 12px;
   display: block;
   margin-bottom: 1rem;
 }
 
-.card-button {
-  display: inline-block;
-  background: var(--accent);
-  color: var(--primary-bg);
-  text-decoration: none;
-  font-weight: bold;
-  padding: 0.75rem 1rem;
-  border-radius: 8px;
+.map-card h2 {
+  color: var(--accent);
+  margin-bottom: 0.5rem;
 }
 
-.card-button:hover {
+.map-card p {
+  color: var(--text-light);
+  margin-bottom: 1rem;
+}
+
+.map-btn {
+  background: var(--accent);
+  color: var(--primary-bg);
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.map-btn:hover {
   background: var(--highlight);
 }
 
-@media screen and (min-width: 768px) {
-  .about-grid {
-    grid-template-columns: 1fr 1fr;
-  }
+.map-images {
+  display: none;
+  margin-top: 1rem;
+  gap: 1rem;
+}
 
-  .updates-card {
-    grid-column: 1 / 3;
+.map-images.open {
+  display: grid;
+}
+
+.map-images {
+    display: none;
+    margin-top: 1rem;
+}
+
+
+
+.map-images.open {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.map-images img {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+}
+
+.map-images img {
+    cursor: pointer;
+    transition: transform .3s ease;
+}
+
+.map-images img:hover {
+    transform: scale(1.03);
+}
+
+.maps-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.map-grid {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.map-card {
+  background: var(--card-bg);
+  border: 2px solid var(--border);
+  border-radius: 16px;
+  padding: 1.5rem;
+}
+
+.map-main-img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.map-images {
+  display: none;
+  margin-top: 1rem;
+}
+
+.map-images.open {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.map-images img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* desktop layout */
+@media screen and (min-width: 900px) {
+  .map-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 

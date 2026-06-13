@@ -8,6 +8,7 @@
     <link rel="Icon type" href="images/favicon_final.ico">
     <link rel="stylesheet" href="styles/base.css">
     <script src="scripts/final.js" defer></script>
+    <script src="scripts/maps.mjs" type="module"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Oswald:wght@200..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
@@ -24,17 +25,74 @@
         <nav id="site-navigation">
             <button id="menu">☰</button>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="index.html">About</a></li>
                 <li><a href="maps.html">Maps</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
+   <main class="about-main">
 
-    </main>
+  <section class="about-hero">
+
+    <div class="hero-content">
+      <h1>Learn the Maps. Win More Ranked Games.</h1>
+      <p>
+        Master Rainbow Six Siege map layouts, callouts, and room locations
+        before your next ranked match.
+      </p>
+      <a href="maps.html" class="hero-button">Browse Maps</a>
+    </div>
+  </section>
+
+  <section class="about-grid">
+
+    <article class="about-card">
+      <h2>About the Site</h2>
+      <p>
+        Siege Study was created to help Rainbow Six Siege players learn ranked
+        map layouts and callouts in one simple place.
+      </p>
+    </article>
+
+    <article class="about-card">
+      <h2>My Ranked Journey</h2>
+      <p>
+        When I started playing ranked, I quickly learned how important callouts
+        and map knowledge were. This site is built to help other players study
+        faster and communicate better.
+      </p>
+    </article>
+
+    <article class="about-card featured-map-card">
+      <h2>Featured Map</h2>
+
+      <!-- JavaScript will randomly fill this card later -->
+      <div id="random-map">
+        <img src="images/bank/bank_cover.webp" alt="Bank map preview">
+        <h3>Bank</h3>
+        <p>
+          A ranked map with strong vertical play, important stair control,
+          and several key callout areas.
+        </p>
+        <a href="maps.html" class="card-button">View Map</a>
+      </div>
+    </article>
+
+    <article class="about-card updates-card">
+      <h2>Upcoming Updates</h2>
+      <ul>
+        <li>More detailed map callouts</li>
+        <li>Clickable map schematics</li>
+        <li>Ranked map rotation updates</li>
+        <li>Mobile-friendly improvements</li>
+      </ul>
+    </article>
+
+  </section>
+
+</main>
 
     <footer>
         <div class="socials">

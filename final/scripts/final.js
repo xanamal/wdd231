@@ -56,3 +56,5 @@ wddButton.addEventListener("click", () => {
 });
 
 displayCourses(courses);
+
+
